@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ссылка и форма</title>
+</head>
+<body>
+    <main>
+         <h1>Маркированный список гиперссылок</h1>
+            <ul>
+                <li><a href="http://kubsu.ru">1) Абсолютная на главную страницу kubsu.ru (HTTP)</a></li>
+                <li><a href="https://kubsu.ru">2) Абсолютная на главную страницу kubsu.ru (HTTPS)</a></li>
+                <li><a href="https://example.com/about"><img src="image.jpg" alt=Flower" style="width: 200px;"></a>3) Ссылка-изображение </li>
+                <li><a href="ru/abiturient">4)  Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li><a href="/">5) / — сокращённая ссылка на главную</a></li>
+                <li><a href="#about">6) Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="search.html?cat=books&sort=price&view=list">7) Ссылка с тремя параметрами в URL</a></li>
+                <li><a href="/profile?id=123">8) С параметром id в URL</a></li>
+                <li><a href="page.html">9) Относительная на страницу в текущем каталоге</a></li>
+                <li><a href="about/page.html">10) Относительная на страницу в каталоге about</a></li>
+                <li><a href="../page.html">11) Относительная на страницу в каталоге уровнем выше</a></li>
+                <li><a href="../../page.html">12) ../../up-two.html (двумя уровнями выше)</a></li>
+                <li>13) Контекстная в тексте абзаца: Больше вы можете узнать на <a href="https://kubsu.ru"> сайте</a> </li>
+                <li><a href="https://kubsu.ru#section">14) Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li>
+                    15)Ссылки из прямоугольных и круглых областей картинки (HTML-тег map)<br>
+                    <img src="image.jpg" alt="Карта ссылок" usemap="#imageMap" style="width: 200px;">
+                    <map name="imageMap">
+                        <area shape="rect" coords="20,20,40,30" href="https://kubsu.ru" alt="Прямоугольная область">
+                        <area shape="circle" coords="150,50,25" href="https://example.com" alt="Круглая область">
+                    </map>
+                </li>
+                <li><a href="">16)  Ссылка с пустым href</a></li>
+                <li><a> 17) Ссылка без href</a></li>
+                <li><a href="https://example.com/private" rel="nofollow">18) Запрещена для перехода поисковикам</a></li>
+                <li><a href="https://example.com/noindex-target" rel="noindex">19) Запрещенна для индексации поисковиками</a></li>
+                <li>
+                    20) Нумерованный список с title:
+                    <ol>
+                        <li><a href="https://kubsu.ru" title="Главная страница университета"> Ссылка 1</a></li>
+                        <li><a href="https://example.com/about" title="Скачать документ 2 (PDF)"> Ссылка 2 </a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://user:password@ftp.example.com/file.txt">21) Ссылка на файл на сервере FTP с авторизацией </a></li>
+            </ul>
+
+        <h1>Форма</h1>
+        <form action="/submit" method="post">
+
+            <p>Персональные данные</p>
+            <label for="fullname">ФИО</label>
+            <input id="fullname" name="fullname" type="text">
+            <p></p>
+            <label for="phone">Телефон</label>
+
+            <input id="phone" name="phone" type="tel">
+            <p></p>
+
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="email">
+            <p></p>
+
+            <label for="birthday">Дата рождения</label>
+            <input id="birthday" name="birthday" type="date">
+            <p></p>
+
+            <legend>Пол</legend>
+            <label><input type="radio" name="gender" value="male" required> Мужской</label>
+            <label><input type="radio" name="gender" value="female"> Женский</label>
+            <p></p>
+
+            <label for="languages">Любимый язык программирования (можно выбрать несколько)</label>
+            <p></p>
+            <select name="languages[]" multiple="multiple">
+                <option>Pascal</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>JavaScript</option>
+                <option>PHP</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>Haskel</option>
+                <option>Clojure</option>
+                <option>Prolog</option>
+                <option>Scala</option>
+            </select>
+            <p></p>
+
+            <label for="bio">Биография</label>
+            <textarea name="bio">Краткая биография...</textarea>
+            <p></p>
+
+            <label><input type="checkbox" id="agree" name="agree" required> С контрактом ознакомлен(а)</label>
+            <p></p>
+
+            <button type="submit">Сохранить</button>
+        </form>
+    </main>
+</body>
+</html>
